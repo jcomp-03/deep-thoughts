@@ -35,6 +35,8 @@ const client = new ApolloClient({
   cache: new InMemoryCache(),
 });
 
+
+
 function App() {
   return (
     <ApolloProvider client={client}>
@@ -47,6 +49,7 @@ function App() {
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
               <Route path="/profile/:username" element={<Profile />} />
+              <Route path="/profile/" element={<Profile />} />
               <Route path="/thought/:id" element={<SingleThought />} />
               <Route path="*" element={<NoMatch />} />
             </Routes>
